@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Céleste Café | Basaveshwaranagar, Bengaluru</title>
+  <meta name="description" content="La Céleste Café in Basaveshwaranagar, Bengaluru. A charming glass conservatory cafe with budget-friendly bakery items from ₹35, private starlight party hall with live photo projection, and specialty coffee. Rating 4.0 ★.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       1. LIVE WEATHER BANNER (WeatherAPI)
+       Shows real-time weather & temp for Bengaluru
+       ========================================================= -->
+  <aside class="weather-top-banner" id="weather-banner" aria-label="Live Weather Information">
+    <div class="container weather-banner-container">
+      <div class="weather-pill-group">
+        <span class="live-dot-pulse"></span>
+        <span class="weather-badge-label">Bengaluru Live Weather</span>
+        <span class="weather-location-tag">📍 Basaveshwaranagar, Bengaluru</span>
+      </div>
+
+      <!-- Weather Data Dynamic Container (Populated by JavaScript fetch()) -->
+      <div class="weather-live-data" id="weather-data-container">
+        <div class="weather-loading" id="weather-loading">
+          <span class="spinner-small"></span> Checking live Bengaluru weather...
+        </div>
+        <div class="weather-content hidden" id="weather-content">
+          <img src="" alt="Weather condition" class="weather-icon-img" id="weather-icon" width="34" height="34">
+          <span class="weather-temp" id="weather-temp">--°C</span>
+          <span class="weather-divider">•</span>
+          <span class="weather-condition" id="weather-condition">Loading weather...</span>
+          <span class="weather-divider">•</span>
+          <span class="weather-feels" id="weather-feels">Feels like --°C</span>
+        </div>
+      </div>
+
+      <!-- Quick Occasion Weather Prompt Trigger -->
+      <div class="weather-banner-cta">
+        <a href="#weather-companion" class="weather-cta-link">
+          <span>✨ Plan Your Occasion</span>
+          <span class="arrow-sparkle">→</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================
+       2. NAVIGATION HEADER
+       ========================================================= -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-emblem">✨</div>
+        <div class="brand-text-block">
+          <span class="brand-name">La Céleste Café</span>
+          <span class="brand-sub">Basaveshwaranagar • Bengaluru</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#weather-companion" class="nav-link highlight-nav">Occasion Guide ✨</a></li>
+        <li><a href="#party-hall" class="nav-link highlight-nav hall-nav-link">Party Hall &amp; Projector 📽️</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#menu" class="nav-link">Menu &amp; Bakes</a></li>
+        <li><a href="#hours" class="nav-link">Hours &amp; Location</a></li>
+        <li><a href="#contact" class="nav-link">Contact &amp; Table</a></li>
+        <li class="nav-cta-item"><a href="#party-hall" class="btn btn-primary nav-cta">Book Party Hall 🌟</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         3. HERO SECTION (La Céleste Café)
+         ========================================================= -->
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-cluster">
+            <span class="badge badge-accent">
+              <span class="badge-dot"></span> 8th Main Rd, Basaveshwaranagar
+            </span>
+            <span class="rating-badge">★ 4.0 Rating (3,600+ Reviews)</span>
+            <span class="price-badge">Budget-Friendly • From ₹35</span>
+          </div>
+
+          <h1 class="hero-title">
+            Warm Pastries, Cozy Corners &amp; <span class="highlight">Starlit Celebrations.</span>
+          </h1>
+          <p class="hero-description">
+            Welcome to <strong>La Céleste Café</strong> in Basaveshwaranagar! A dreamy glass-conservatory cafe featuring budget-friendly French macarons, flaky warm croissants, freshly brewed coffees, and a private party hall with real starlight ceiling projections.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#party-hall" class="btn btn-primary">
+              <span>Book The Starlight Party Hall 📽️✨</span>
+            </a>
+            <a href="#menu" class="btn btn-outline">Explore Budget Menu (from ₹35)</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">4.0 ★</span>
+              <span class="stat-label">Customer Rating</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">₹35 – 360</span>
+              <span class="stat-label">Budget-Friendly Menu</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">9:30 AM – 11:30 PM</span>
+              <span class="stat-label">Open Daily All 7 Days</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" 
+              alt="Romantic conservatory cafe with warm glowing lighting, velvet booths and lush greenery"
+              class="hero-img"
+              loading="lazy"
+            >
+            <div class="floating-badge hero-floating-card">
+              <div class="icon-circle">🥐</div>
+              <div>
+                <strong class="floating-title">Fresh Daily Bakery</strong>
+                <p class="floating-subtitle">French Macarons from ₹35 &amp; Warm Croissants</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. DYNAMIC OCCASION & LIVE WEATHER COMPANION
+         ========================================================= -->
+    <section class="weather-companion-section section" id="weather-companion">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">✨ Occasion &amp; Weather Assistant ✨</span>
+          <h2 class="section-title">What's the Occasion Today? ☕🎈</h2>
+          <p class="section-subtitle">
+            Tell us who you're visiting with! Based on the live weather in <strong>Basaveshwaranagar, Bengaluru</strong>, we’ll recommend the perfect drinks and bakes, and write a heartwarming wish tailored just for your celebration.
+          </p>
+        </div>
+
+        <div class="companion-card">
+          <!-- Step 1: Input Name & Pick Occasion -->
+          <div class="companion-inputs">
+            <div class="input-row-companion">
+              <div class="name-field-wrap">
+                <label for="companion-name" class="companion-label">
+                  <span>👤 What is your name?</span>
+                  <span class="sub-hint">(So we can personalize your wish)</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="companion-name" 
+                  class="companion-input" 
+                  placeholder="e.g. Aisiri, Rahul, Ananya..."
+                  value=""
+                >
+              </div>
+
+              <div class="weather-snapshot-chip" id="companion-weather-snapshot">
+                <div class="snapshot-icon" id="snapshot-icon-wrapper">🌤️</div>
+                <div class="snapshot-details">
+                  <span class="snapshot-label">Bengaluru Weather</span>
+                  <strong class="snapshot-temp" id="snapshot-temp-display">24°C • Loading...</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Occasion Buttons Selector -->
+            <label class="companion-label">
+              <span>💖 Select Your Special Occasion:</span>
+            </label>
+            <div class="occasion-selector-grid" id="occasion-btn-group">
+              <button type="button" class="occasion-chip active" data-occasion="date">
+                <span class="chip-emoji">💖</span>
+                <span class="chip-title">Romantic Date</span>
+                <span class="chip-sub">Candlelight &amp; quiet conversations</span>
+              </button>
+
+              <button type="button" class="occasion-chip" data-occasion="friends">
+                <span class="chip-emoji">👯</span>
+                <span class="chip-title">Chilling with Friends</span>
+                <span class="chip-sub">Gossip, laughter &amp; bakes</span>
+              </button>
+
+              <button type="button" class="occasion-chip" data-occasion="family">
+                <span class="chip-emoji">👨‍👩‍👧‍👦</span>
+                <span class="chip-title">Family Get-Together</span>
+                <span class="chip-sub">Heartwarming brunch &amp; bakes</span>
+              </button>
+
+              <button type="button" class="occasion-chip" data-occasion="birthday">
+                <span class="chip-emoji">🎂</span>
+                <span class="chip-title">Birthday Celebration</span>
+                <span class="chip-sub">Cake cutting, candles &amp; wishes</span>
+              </button>
+
+              <button type="button" class="occasion-chip" data-occasion="anniversary">
+                <span class="chip-emoji">💍</span>
+                <span class="chip-title">Anniversary Special</span>
+                <span class="chip-sub">Celebrating milestone moments</span>
+              </button>
+
+              <button type="button" class="occasion-chip" data-occasion="solo">
+                <span class="chip-emoji">📖</span>
+                <span class="chip-title">Solo Coffee Break</span>
+                <span class="chip-sub">Book reading, latte &amp; relaxation</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Output Card -->
+          <div class="companion-output-board" id="companion-output-board">
+            <div class="board-top-status">
+              <div class="weather-temp-indicator" id="temp-indicator-pill">
+                <span class="pill-dot"></span>
+                <span id="temp-condition-summary">Checking Bengaluru temperature...</span>
+              </div>
+              <span class="recommendation-badge" id="recommendation-badge-tag">Custom Recommendation</span>
+            </div>
+
+            <!-- Greeting Banner -->
+            <div class="companion-greeting-card">
+              <h3 class="companion-greeting-title" id="companion-greeting-title">
+                Hello lovely friend! 💖
+              </h3>
+              <p class="companion-greeting-text" id="companion-greeting-text">
+                Welcome to La Céleste Café! Here are our chef recommendations for today's weather:
+              </p>
+            </div>
+
+            <!-- Drinks & Food Recommendation Container -->
+            <div class="recommendation-results" id="recommendation-results">
+              <h4 class="rec-section-heading" id="rec-heading">
+                🍹 Recommended Refreshments for this Weather:
+              </h4>
+
+              <!-- List of drinks -->
+              <div class="drinks-recommendation-list" id="drinks-list-container">
+                <!-- Injected via JavaScript -->
+              </div>
+
+              <!-- Hero Highlight Card -->
+              <div class="hero-recommendation-box" id="hero-recommendation-box">
+                <div class="hero-rec-sparkle">✨</div>
+                <div class="hero-rec-content">
+                  <span class="hero-rec-tag" id="hero-rec-tag">Chef's Special Match</span>
+                  <h4 class="hero-rec-title" id="hero-rec-title">Lavender Cold Brew (₹150)</h4>
+                  <p class="hero-rec-reason" id="hero-rec-reason">
+                    Because Bengaluru is warm at 26°C today and you're on a date, this slow-steeped iced coffee with lavender aroma is refreshing, light, and wonderfully romantic!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Heartfelt Occasion Message & Wish -->
+            <div class="occasion-wish-box" id="occasion-wish-box">
+              <div class="wish-icon" id="wish-icon">💌</div>
+              <div class="wish-body">
+                <span class="wish-small-title">A Special Note from La Céleste Café:</span>
+                <p class="wish-message" id="wish-message-text">
+                  "Wishing you two the most enchanting time together! May your conversations flow smoothly and sparks fly over our fresh pastries. Have a dreamy date! ☕❤️"
+                </p>
+              </div>
+            </div>
+
+            <!-- Quick Table Action -->
+            <div class="companion-cta-footer">
+              <a href="#party-hall" class="btn btn-primary" id="companion-book-btn">
+                <span>Book The Starlight Party Hall 🌟</span>
+              </a>
+              <span class="mini-note">★ La Céleste Café • Basaveshwaranagar, Bengaluru • Open until 11:30 PM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. PARTY HALL & PROJECTION SUITE
+         Features: Photo Projection, Occasion Music Curator & Language
+         ========================================================= -->
+    <section class="party-hall-section section" id="party-hall">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">✨ Private Party Hall &amp; Projection Suite ✨</span>
+          <h2 class="section-title">The Starlight Party Hall &amp; Cinema Screen</h2>
+          <p class="section-subtitle">
+            A private glass ballroom with starlight dome ceiling! Project your personal photos on our grand cinema wall, choose custom celebration music in any language, and celebrate in style.
+          </p>
+        </div>
+
+        <div class="party-hall-grid">
+          <!-- Left: Customization & Booking Form -->
+          <div class="hall-booking-card">
+            <div class="hall-step-badge">
+              <span>Step 1: Party Hall Reservation &amp; Customization</span>
+            </div>
+
+            <form id="hall-reservation-form" class="hall-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="hallHostName">Host's Name <span class="required">*</span></label>
+                  <input type="text" id="hallHostName" placeholder="e.g. Aisiri Sharma" required>
+                  <span class="error-msg" id="hall-name-error">Please provide the host's name ✨</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="hallPhone">Phone / WhatsApp Number <span class="required">*</span></label>
+                  <input type="tel" id="hallPhone" placeholder="+91 98450 88888" required>
+                  <span class="error-msg" id="hall-phone-error">Please provide a valid contact number 📞</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="hallOccasionSelect">Occasion <span class="required">*</span></label>
+                  <select id="hallOccasionSelect" required>
+                    <option value="birthday">🎂 Birthday Celebration &amp; Cake Cutting</option>
+                    <option value="anniversary">💍 Wedding Anniversary &amp; Milestones</option>
+                    <option value="date">💖 Private Romantic Proposal &amp; Candlelight</option>
+                    <option value="friends">👯 Friends Reunion &amp; Party Night</option>
+                    <option value="family">👨‍👩‍👧‍👦 Family Get-Together &amp; Dinner</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="hallGuestsCount">Number of Guests</label>
+                  <select id="hallGuestsCount">
+                    <option value="intimate">Intimate (2 to 6 VIP Guests)</option>
+                    <option value="medium">Charming Gathering (10 to 25 Guests)</option>
+                    <option value="grand">Grand Ballroom (30 to 80 Guests)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- MUSIC CURATOR: Choose Language & Track -->
+              <div class="hall-music-curator-box">
+                <div class="music-curator-header">
+                  <span class="music-icon">🎵</span>
+                  <div>
+                    <strong>Curate Your Music for the Occasion</strong>
+                    <p class="music-sub">Select your preferred song language and playlist</p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="musicLanguage">Select Song Language</label>
+                    <select id="musicLanguage">
+                      <option value="english">English (Pop, Ballads &amp; Acoustic)</option>
+                      <option value="hindi">Hindi / Bollywood (Romantic &amp; Party Unplugged)</option>
+                      <option value="kannada">Kannada (Melodic Classics &amp; Modern Hits)</option>
+                      <option value="french">French (Acoustic Jazz &amp; Melodies)</option>
+                      <option value="instrumental">Instrumental (Lo-Fi Piano &amp; Strings)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="musicTrackSelect">Choose Song / Playlist</label>
+                    <select id="musicTrackSelect">
+                      <!-- Populated dynamically via script.js based on language & occasion -->
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PHOTO PROJECTION ATTACHMENT -->
+              <div class="hall-photo-uploader-box">
+                <div class="photo-upload-header">
+                  <span class="upload-icon">📽️</span>
+                  <div>
+                    <strong>Attach Photo for Cinema Screen Projection</strong>
+                    <p class="photo-sub">Upload any photo to project it on the party hall screen!</p>
+                  </div>
+                </div>
+
+                <div class="upload-controls-row">
+                  <label class="custom-file-upload btn btn-outline btn-sm" for="projectorPhotoInput">
+                    <span>📷 Upload Photo File</span>
+                    <input type="file" id="projectorPhotoInput" accept="image/*" class="file-hidden-input">
+                  </label>
+                  <button type="button" class="btn btn-sm btn-sample" id="loadSamplePhotoBtn">
+                    ✨ Use Sample Photo
+                  </button>
+                </div>
+
+                <div class="form-group" style="margin-top: 12px;">
+                  <label for="projectionCaptionInput">Message to Project on Screen</label>
+                  <input 
+                    type="text" 
+                    id="projectionCaptionInput" 
+                    placeholder="e.g. Happy 25th Birthday Aisiri! Forever our shining star 🌟" 
+                    value="Happy Celebration at La Céleste Café! ✨"
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="hallBookingDate">Event Date</label>
+                  <input type="date" id="hallBookingDate">
+                </div>
+
+                <div class="form-group">
+                  <label for="hallBookingSlot">Time Slot</label>
+                  <select id="hallBookingSlot">
+                    <option value="slot1">Afternoon Party (12:00 PM – 3:30 PM)</option>
+                    <option value="slot2">Evening High Tea (4:00 PM – 7:30 PM)</option>
+                    <option value="slot3" selected>Starlit Dinner Party (8:00 PM – 11:30 PM)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="hallSubmitBtn">
+                <span>Confirm Party Hall Booking 🌟</span>
+              </button>
+
+              <div class="form-success-banner" id="hall-success-banner">
+                <div class="success-icon">🎉</div>
+                <div class="success-content-block">
+                  <strong class="success-user-title" id="hall-success-title">Party Hall Confirmed! 🌟</strong>
+                  <p id="hall-success-msg">Your private party hall reservation, music playlist, and photo projection are confirmed!</p>
+                  <div class="success-wish-snippet" id="hall-success-snippet">
+                    <!-- Dynamic wish -->
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Right: Live Interactive Starlight Projector Screen Preview -->
+          <div class="projector-preview-container">
+            <div class="projector-frame">
+              <div class="projector-lens-glow"></div>
+              
+              <div class="projector-screen-bezel">
+                <div class="screen-status-badge">
+                  <span class="live-dot-pulse"></span>
+                  <span>LIVE CINEMA PROJECTION PREVIEW</span>
+                </div>
+
+                <!-- The Actual Projected Display Canvas -->
+                <div class="screen-canvas" id="projectorCanvas">
+                  <div class="screen-projected-image-wrap">
+                    <img 
+                      src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80" 
+                      alt="Projected celebratory memory" 
+                      id="projectorImageDisplay"
+                      class="projected-img"
+                    >
+                    <div class="starlight-sparkles-overlay"></div>
+                  </div>
+
+                  <!-- Overlay Projected Caption -->
+                  <div class="screen-projected-caption-bar">
+                    <span class="caption-tag" id="projectorOccasionBadge">CELEBRATION</span>
+                    <h3 class="caption-text" id="projectorCaptionText">
+                      Happy Celebration at La Céleste Café! ✨
+                    </h3>
+                  </div>
+                </div>
+
+                <!-- Simulated Hall Audio Visualizer -->
+                <div class="hall-audio-player-bar">
+                  <div class="audio-track-info">
+                    <span class="audio-note-icon">🎵</span>
+                    <div>
+                      <strong class="track-title" id="audioCurrentTrackName">Until I Found You — Acoustic Ballad</strong>
+                      <span class="track-lang" id="audioCurrentLang">Language: English • Curated for Occasion</span>
+                    </div>
+                  </div>
+                  <div class="equalizer-bars">
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                    <span class="eq-bar"></span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hall Perks Ribbon -->
+              <div class="hall-perks-ribbon">
+                <div class="hall-perk">
+                  <span>🌌</span>
+                  <p>Starlight dome ceiling</p>
+                </div>
+                <div class="hall-perk">
+                  <span>🕯️</span>
+                  <p>Private barista &amp; chef</p>
+                </div>
+                <div class="hall-perk">
+                  <span>🍰</span>
+                  <p>Fresh celebration cake included</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. ABOUT LA CÉLESTE CAFÉ
+         ========================================================= -->
+    <section class="features section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">The Charm of La Céleste Café</h2>
+          <p class="section-subtitle">
+            Situated in the green, tree-lined neighborhood of <strong>Basaveshwaranagar, Bengaluru</strong>, La Céleste Café is a peaceful sanctuary for fresh budget-friendly bakery items, specialty coffee, and magical gatherings.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3 class="feature-title">Glass Conservatory Ambience</h3>
+            <p class="feature-text">Tall glass windows, indoor greenery, warm golden chandeliers, and peaceful seating that lets you unwind away from city noise.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🥐</div>
+            <h3 class="feature-title">Bakery Items Starting at ₹35</h3>
+            <p class="feature-text">Freshly baked butter croissants, chocolate bakes, and delicate macarons made fresh every few hours at pocket-friendly prices.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📽️</div>
+            <h3 class="feature-title">Private Party Hall with Projector</h3>
+            <p class="feature-text">Celebrate birthdays and anniversaries in our private party hall with starlight ceilings, custom photo projection, and music in your favorite language.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">☕</div>
+            <h3 class="feature-title">Handcrafted Coffee</h3>
+            <p class="feature-text">Fresh Arabica espresso beans, slow-dripped cold brews, hot chocolate, and iced coolers crafted by experienced baristas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. MENU (All in English & ₹ Indian Rupees)
+         ========================================================= -->
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Pocket-Friendly Delights</span>
+          <h2 class="section-title">Our Specialty Menu</h2>
+          <p class="section-subtitle">
+            Enjoy delicious handcrafted bakery items, cold coolers, and bistro favorites from ₹35 to ₹360! All prices in Indian Rupees (₹).
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="menu-tabs">
+          <button class="tab-btn active" data-category="all">All Items</button>
+          <button class="tab-btn" data-category="budget">Budget Specials (Under ₹150)</button>
+          <button class="tab-btn" data-category="bakery">Bakery &amp; Desserts</button>
+          <button class="tab-btn" data-category="coolers">Iced Coolers &amp; Brews</button>
+          <button class="tab-btn" data-category="savories">Pizzas &amp; Savories</button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-grid" id="menu-grid">
+          <!-- Item 1: French Macarons (Budget Hero) -->
+          <article class="menu-card" data-category="budget">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Assorted French Macarons</h3>
+                <span class="item-pill popular">Budget Star</span>
+              </div>
+              <span class="item-price">₹35 <small>/ piece (Box of 3: ₹99)</small></span>
+            </div>
+            <p class="item-desc">Crisp almond shells filled with dark chocolate ganache, pistachio, and salted caramel.</p>
+            <span class="item-meta">Fresh In-House • Vegetarian</span>
+          </article>
+
+          <!-- Item 2: Butter Croissant with Berry Jam -->
+          <article class="menu-card" data-category="budget">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Butter Croissant with Berry Jam</h3>
+                <span class="item-pill popular">Must Try</span>
+              </div>
+              <span class="item-price">₹120</span>
+            </div>
+            <p class="item-desc">Flaky, golden-layered butter croissant served warm with sweet raspberry jam.</p>
+            <span class="item-meta">Baked Daily • Vegetarian</span>
+          </article>
+
+          <!-- Item 3: Classic Chocolate Croissant -->
+          <article class="menu-card" data-category="budget">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Classic Chocolate Croissant</h3>
+                <span class="item-pill">Warm Bake</span>
+              </div>
+              <span class="item-price">₹140</span>
+            </div>
+            <p class="item-desc">Crispy layered pastry folded with rich melting dark chocolate bars inside.</p>
+            <span class="item-meta">Fresh In-House • Vegetarian</span>
+          </article>
+
+          <!-- Item 4: Lavender Cold Brew -->
+          <article class="menu-card" data-category="budget">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Lavender Iced Cold Brew</h3>
+                <span class="item-pill">Signature</span>
+              </div>
+              <span class="item-price">₹150</span>
+            </div>
+            <p class="item-desc">Slow-steeped 18-hour cold brew coffee infused with light lavender syrup and sparkling tonic.</p>
+            <span class="item-meta">Chilled • 350 ml • Refreshing</span>
+          </article>
+
+          <!-- Item 5: Coffee with Garlic Toast -->
+          <article class="menu-card" data-category="budget">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Hot Coffee with Garlic Toast</h3>
+                <span class="item-pill">Combo Special</span>
+              </div>
+              <span class="item-price">₹130</span>
+            </div>
+            <p class="item-desc">Steaming hot filter coffee paired with toasted herb garlic butter bread.</p>
+            <span class="item-meta">Hot Combo • Hearty Snack</span>
+          </article>
+
+          <!-- Item 6: Vanilla Caramel Tart -->
+          <article class="menu-card" data-category="bakery">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Vanilla Caramel Tart</h3>
+                <span class="item-pill popular">Chef's Pick</span>
+              </div>
+              <span class="item-price">₹160</span>
+            </div>
+            <p class="item-desc">Crisp pastry crust filled with smooth vanilla custard and crackling caramelized sugar top.</p>
+            <span class="item-meta">Individual Tart • Eggless Option</span>
+          </article>
+
+          <!-- Item 7: Red Velvet Éclair -->
+          <article class="menu-card" data-category="bakery">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Red Velvet Cream Cheese Éclair</h3>
+                <span class="item-pill">House Icon</span>
+              </div>
+              <span class="item-price">₹110</span>
+            </div>
+            <p class="item-desc">Crispy choux pastry piped with crimson cocoa cream cheese and glazed with ruby chocolate.</p>
+            <span class="item-meta">Fresh Pastry • Best Seller</span>
+          </article>
+
+          <!-- Item 8: Vanilla Cloud Frappe -->
+          <article class="menu-card" data-category="coolers">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Vanilla Cloud Coffee Frappe</h3>
+                <span class="item-pill">Cool Drink</span>
+              </div>
+              <span class="item-price">₹175</span>
+            </div>
+            <p class="item-desc">Blended iced milk, espresso shot, vanilla cream, topped with whipped cream and wafer crumbs.</p>
+            <span class="item-meta">Chilled &amp; Creamy • 400 ml</span>
+          </article>
+
+          <!-- Item 9: Wild Berry Sparkling Cooler -->
+          <article class="menu-card" data-category="coolers">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Wild Berry Sparkling Cooler</h3>
+                <span class="item-pill">Refreshing</span>
+              </div>
+              <span class="item-price">₹160</span>
+            </div>
+            <p class="item-desc">Crushed sweet raspberries, fresh mint leaves, lime juice, and sparkling soda over ice.</p>
+            <span class="item-meta">Iced Cooler • 350 ml</span>
+          </article>
+
+          <!-- Item 10: Grilled Truffle Cheese Sandwich -->
+          <article class="menu-card" data-category="savories">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Grilled Truffle Cheese Sandwich</h3>
+                <span class="item-pill popular">Customer Favorite</span>
+              </div>
+              <span class="item-price">₹190</span>
+            </div>
+            <p class="item-desc">Toasted sourdough bread filled with melting cheese, creamy white sauce, and a touch of truffle aroma.</p>
+            <span class="item-meta">Warm Savory • Vegetarian</span>
+          </article>
+
+          <!-- Item 11: Wood-Fired Margherita Pizza -->
+          <article class="menu-card" data-category="savories">
+            <div class="menu-card-header">
+              <div>
+                <h3 class="item-title">Wood-Fired Margherita Pizza</h3>
+                <span class="item-pill">Signature Bake</span>
+              </div>
+              <span class="item-price">₹360</span>
+            </div>
+            <p class="item-desc">Thin crispy sourdough crust, slow-cooked tomato sauce, fresh mozzarella cheese, and sweet basil leaves.</p>
+            <span class="item-meta">10 Inch • Vegetarian</span>
+          </article>
+        </div>
+
+        <div class="menu-footer-note text-center">
+          <p>✨ <em>Average meal for two: ₹300 – ₹600. All prices in Indian Rupees (₹). Oat and almond milk available on request.</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. OPENING HOURS & LOCATION (Basaveshwaranagar, Bengaluru)
+         Rating: 4.0 ★ | Timings: 9:30 AM to 11:30 PM (All 7 Days)
+         ========================================================= -->
+    <section class="hours-section section" id="hours">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Hours &amp; Location</span>
+          <h2 class="section-title">Visit Us in Basaveshwaranagar</h2>
+          <p class="section-subtitle">
+            Conveniently located near Pavithra Paradise and Shankar Mutt in Basaveshwaranagar, easily accessible from Rajajinagar and Vijayanagar.
+          </p>
+        </div>
+
+        <div class="hours-grid">
+          <!-- Hours Card -->
+          <div class="card hours-card">
+            <div class="card-top-status">
+              <span class="status-indicator" id="celeste-live-indicator"></span>
+              <span class="status-text" id="live-status">Open Today: 9:30 AM – 11:30 PM</span>
+            </div>
+
+            <h3 class="card-heading">Operating Timings</h3>
+
+            <ul class="schedule-list">
+              <li class="schedule-item current-day">
+                <span class="day">Monday – Thursday</span>
+                <span class="dots"></span>
+                <span class="time">9:30 AM – 11:30 PM</span>
+              </li>
+              <li class="schedule-item current-day">
+                <span class="day">Friday &amp; Saturday</span>
+                <span class="dots"></span>
+                <span class="time">9:30 AM – 11:30 PM</span>
+              </li>
+              <li class="schedule-item current-day">
+                <span class="day">Sunday &amp; Public Holidays</span>
+                <span class="dots"></span>
+                <span class="time">9:30 AM – 11:30 PM</span>
+              </li>
+            </ul>
+
+            <div class="cafe-meta-highlights">
+              <div class="meta-row">
+                <span class="meta-label">⭐ Cafe Rating:</span>
+                <strong class="meta-val">4.0 / 5.0 (3,600+ Google Reviews)</strong>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">💰 Price for Two:</span>
+                <strong class="meta-val">₹250 to ₹650 (Budget Friendly)</strong>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">🥐 Hot Bakes Schedule:</span>
+                <strong class="meta-val">Fresh croissants come out hot at 10 AM, 3 PM &amp; 7 PM</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location & Details Card -->
+          <div class="card location-card">
+            <div class="location-details">
+              <h3 class="card-heading">Address &amp; Contact</h3>
+              
+              <div class="contact-info-block">
+                <div class="info-icon">📍</div>
+                <div>
+                  <strong>Specific Address</strong>
+                  <p>No. 42, 8th Main Road, Near Pavithra Paradise &amp; Shankar Mutt, 3rd Stage, 4th Block, Basaveshwaranagar, Bengaluru, Karnataka 560079</p>
+                </div>
+              </div>
+
+              <div class="contact-info-block">
+                <div class="info-icon">📞</div>
+                <div>
+                  <strong>Phone / Reservations</strong>
+                  <p><a href="tel:+918041228888">+91 (080) 4122-8888</a> / <a href="tel:+919845088888">+91 98450 88888</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-block">
+                <div class="info-icon">✉️</div>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:hello@lacelestecafe.com">hello@lacelestecafe.com</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-block">
+                <div class="info-icon">🛵</div>
+                <div>
+                  <strong>Parking &amp; Facilities</strong>
+                  <p>Two-wheeler parking in front, street parking assistance, pet-friendly outdoor seating, free Wi-Fi, and private party hall.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stylized Visual Map Card -->
+            <div class="map-preview">
+              <div class="map-overlay">
+                <div class="map-pin">
+                  <div class="pin-ring"></div>
+                  <div class="pin-dot"></div>
+                </div>
+                <div class="map-info-popup">
+                  <span class="popup-title">La Céleste Café ✨</span>
+                  <span class="popup-sub">8th Main Road, Basaveshwaranagar</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. TABLE RESERVATION FORM
+         ========================================================= -->
+    <section class="contact-section section" id="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-text">
+            <span class="section-tag">💖 Table Booking 💖</span>
+            <h2 class="section-title">Reserve a Table at La Céleste Café</h2>
+            <p class="section-subtitle">
+              Planning a romantic candlelight date, birthday dessert crawl, or afternoon coffee with friends? Let us keep a cozy table ready for you.
+            </p>
+
+            <div class="contact-perks">
+              <div class="perk-item">
+                <span class="perk-bullet">✨</span>
+                <div>
+                  <strong>Personalized Table Greeting</strong>
+                  <p>We place a special occasion card on your table when you arrive!</p>
+                </div>
+              </div>
+              <div class="perk-item">
+                <span class="perk-bullet">🥐</span>
+                <div>
+                  <strong>Fresh Bakery Pre-Order</strong>
+                  <p>Reserve a box of macarons (₹99 for 3) or warm chocolate croissants in advance.</p>
+                </div>
+              </div>
+              <div class="perk-item">
+                <span class="perk-bullet">⏰</span>
+                <div>
+                  <strong>Open Everyday 9:30 AM to 11:30 PM</strong>
+                  <p>Fast confirmation via SMS &amp; WhatsApp within 15 minutes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- The Reservation Form -->
+          <div class="contact-form-card">
+            <div class="form-header-badge">
+              <span>✨ Table Reservation Request</span>
+            </div>
+
+            <form id="celeste-order-form" class="coffee-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="orderFullName">Your Name <span class="required">*</span></label>
+                  <input type="text" id="orderFullName" name="orderFullName" placeholder="e.g. Aisiri Sharma" required>
+                  <span class="error-msg" id="order-name-error">Please tell us your name ✨</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="orderPhone">Phone Number <span class="required">*</span></label>
+                  <input type="tel" id="orderPhone" name="orderPhone" placeholder="+91 98450 88888" required>
+                  <span class="error-msg" id="order-phone-error">Please provide a valid 10-digit number 📞</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="orderOccasion">Occasion of Visit <span class="required">*</span></label>
+                  <select id="orderOccasion" name="orderOccasion" required>
+                    <option value="date">💖 Romantic Date / Candlelight Dinner</option>
+                    <option value="friends">👯 Chilling with Friends / Hangout</option>
+                    <option value="family">👨‍👩‍👧‍👦 Family Get-Together / Brunch</option>
+                    <option value="birthday">🎂 Birthday Celebration</option>
+                    <option value="anniversary">💍 Anniversary Celebration</option>
+                    <option value="solo">📖 Solo Coffee Break / Work</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="orderPartySize">Number of Guests</label>
+                  <select id="orderPartySize" name="orderPartySize">
+                    <option value="2">Table for 2 (Romantic / Cozy)</option>
+                    <option value="1">1 Person (Quiet corner)</option>
+                    <option value="3-4">3 to 4 People (Friend squad)</option>
+                    <option value="5-8">5 to 8 People (Family Gathering)</option>
+                    <option value="hall">Want Party Hall? (Use Party Hall Section above)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="orderDate">Preferred Date</label>
+                  <input type="date" id="orderDate" name="orderDate">
+                </div>
+
+                <div class="form-group">
+                  <label for="orderTime">Preferred Time (9:30 AM – 11:30 PM)</label>
+                  <input type="time" id="orderTime" name="orderTime" value="18:30">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="orderMessage">Special Requests (Optional)</label>
+                <textarea id="orderMessage" name="orderMessage" rows="3" placeholder="Tell us if you want birthday candles, a corner booth, or want us to keep a chilled cooler ready!"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="order-submit-btn">
+                <span>Confirm My Table 💖</span>
+                <span class="btn-sparkle">✨</span>
+              </button>
+
+              <!-- Form Success Custom Modal/Alert -->
+              <div class="form-success-banner" id="order-success-banner">
+                <div class="success-icon">🎉</div>
+                <div class="success-content-block">
+                  <strong class="success-user-title" id="success-headline">Thank you! 💖</strong>
+                  <p id="success-body-message">Your table request at La Céleste Café is reserved!</p>
+                  <div class="success-wish-snippet" id="success-wish-snippet">
+                    <!-- Dynamic occasion wish will be placed here -->
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       10. FOOTER (La Céleste Café Identity)
+       ========================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo footer-logo">
+            <div class="logo-emblem">✨</div>
+            <div class="brand-text-block">
+              <span class="brand-name">La Céleste Café</span>
+              <span class="brand-sub">Basaveshwaranagar • Bengaluru</span>
+            </div>
+          </a>
+          <p class="footer-bio">
+            A cozy glass-conservatory cafe in Basaveshwaranagar. Bringing together budget-friendly handmade macarons, freshly baked croissants, and memorable celebrations.
+          </p>
+          <div class="cafe-tagline-quote">
+            “Good coffee, great friends, and sweet memories under the stars.” ☕✨
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-title">Visit &amp; Contact</h4>
+          <ul>
+            <li><strong>Address:</strong> 8th Main Rd, Basaveshwaranagar, Bengaluru</li>
+            <li><strong>Phone:</strong> <a href="tel:+918041228888" style="color:#fbd38d;">+91 (080) 4122-8888</a></li>
+            <li><strong>Mobile:</strong> <a href="tel:+919845088888" style="color:#fbd38d;">+91 98450 88888</a></li>
+            <li><strong>Timings:</strong> 9:30 AM – 11:30 PM (All 7 Days)</li>
+            <li><strong>Rating:</strong> ★ 4.0 / 5.0 (3,600+ Reviews)</li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="footer-title">Menu Favorites</h4>
+          <ul>
+            <li><a href="#menu">French Macarons (₹99 for 3)</a></li>
+            <li><a href="#menu">Butter Croissant &amp; Jam (₹120)</a></li>
+            <li><a href="#menu">Chocolate Croissant (₹140)</a></li>
+            <li><a href="#menu">Vanilla Caramel Tart (₹160)</a></li>
+            <li><a href="#party-hall">Book Party Hall 📽️</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4 class="footer-title">Live Weather Engine</h4>
+          <p>Connected live to WeatherAPI to calibrate our drink recommendations to Bengaluru's atmospheric weather in real-time.</p>
+          <div class="footer-weather-badge">
+            <span>Powered by <strong>WeatherAPI.com</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 La Céleste Café, Basaveshwaranagar, Bengaluru. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#hero">Back to Top ↑</a>
+          <a href="#party-hall">Party Hall &amp; Projector</a>
+          <a href="#weather-companion">Weather Guide</a>
+          <a href="#contact">Book Table</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Master JavaScript: WeatherAPI, Party Hall Projector, Audio Curator & Forms -->
+  <script src="script.js"></script>
+</body>
+</html>
